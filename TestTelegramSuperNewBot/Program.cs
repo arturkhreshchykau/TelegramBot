@@ -10,7 +10,9 @@ namespace TestTelegramSuperNewBot
         private static ITelegramBotClient botClient;
         static void Main(string[] args)
         {
-            botClient = new TelegramBotClient("1381940900:AAGdDWfbjE0h8tUd9_7jrZrYANT-NIq7jA0") { Timeout = TimeSpan.FromSeconds(10)};
+            //* API
+            string api = "1381940900:AAGdDWfbjE0h8tUd9_7jrZrYANT-NIq7jA0";
+            botClient = new TelegramBotClient(api) { Timeout = TimeSpan.FromSeconds(10)};
             var me = botClient.GetMeAsync().Result;
             Console.WriteLine($"Bot id: {me.Id}. Bot Name: {me.FirstName}");
 
